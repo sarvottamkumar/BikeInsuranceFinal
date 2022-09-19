@@ -1,0 +1,10 @@
+<div> <ol [ngStyle]="{'list-style-type':'none'}">
+    
+    <li *ngFor ="let bike of bikeObs$|async">
+        <h4>Brand: {{bike.brand}}<br>
+            <button (click)="show(bike.bikeId)">Show Details</button>
+        </h4>
+
+    </li>
+</ol>
+</div>

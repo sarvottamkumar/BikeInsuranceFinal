@@ -1,0 +1,45 @@
+<form #addForm="ngForm" (ngSubmit)="onSubmit(addForm)" novalidate>
+    <table>
+        <tr>
+            <td>
+                <label for="bikeName">BikeName</label>
+            </td>
+            <td><input type="text" name="planName" [(ngModel)]="bike.bikeName"></td>
+        </tr>
+        <!-- <tr>
+            <td>
+                <label for="bikeId">entryAge</label>
+            </td>
+            <td><input type="entryAge" name="entryAge" #bikeid="ngModel" [(ngModel)]="bike.bikeId"></td>
+        </tr> -->
+        
+    <tr>
+        <td>
+            <label for="bikeNumber">BikeNumber</label>
+        </td> 
+        <td><input type="text" name="bikeNumber" #bikenumber="ngModel" [(ngModel)]="bike.bikeNumber"></td>
+    </tr>
+    <tr>
+        <td>
+            <label for="brand">Brand</label>
+        </td>
+        <td><input type="text" name="brand" #brand="ngModel" [(ngModel)]="bike.brand"></td>
+    </tr>
+    <tr>
+       
+        <td>  <label for="nominee">nominee</label> </td>
+        
+        <td><input type="radio" name="risk" #risk="ngModel" [(ngModel)]="bike.nominee" value="Father">Father
+            <input type="radio" name="risk" #risk="ngModel" [(ngModel)]="bike.nominee" value="Mother">Mother</td>
+    </tr>
+    <tr>
+        <td>
+            <label for="ownerName">OwnerName</label>
+        </td>
+        <td><input type="text" name="ownerName" #ownername="ngModel" [(ngModel)]="bike.ownerName"></td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="Add Bike" [disabled]="!addForm.valid"></td>
+    </tr>
+</table></form>
+
